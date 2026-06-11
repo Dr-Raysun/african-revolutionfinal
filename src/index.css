@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Custom theme extensions for Tailwind v4 */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-primary: #1e3a8a;
+  --color-secondary: #0f172a;
+  --color-accent: #3b82f6;
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  font-family: var(--font-sans);
+}
+
+/* Custom component classes (optional) */
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4;
+  }
+  .section-subtitle {
+    @apply text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+}
