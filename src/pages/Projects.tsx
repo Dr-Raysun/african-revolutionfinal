@@ -1,5 +1,5 @@
 // src/pages/Projects.tsx
-import { CheckCircle, TrendingUp, Shield, Eye, Users, Award } from 'lucide-react'
+import { CheckCircle, TrendingUp, Shield, Eye } from 'lucide-react'
 
 const Projects = () => {
   const projects = [

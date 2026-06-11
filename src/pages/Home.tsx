@@ -7,7 +7,6 @@ import {
   Globe,
   TrendingUp,
   Shield,
-  Cpu,
   GraduationCap,
   Leaf,
   BookOpen,
